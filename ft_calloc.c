@@ -6,7 +6,7 @@
 /*   By: sal-haja <sal-haja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:51:48 by sal-haja          #+#    #+#             */
-/*   Updated: 2023/05/22 10:51:25 by sal-haja         ###   ########.fr       */
+/*   Updated: 2023/05/22 12:07:54 by sal-haja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	len;
 
 	len = nmemb * size;
-	if (nmemb == 0 || len / nmemb != size)
+	if (nmemb != 0 && len / nmemb != size)
 		return (NULL);
 	if ((len < nmemb || len < size) && nmemb != 0 && size != 0)
 		return (NULL);
